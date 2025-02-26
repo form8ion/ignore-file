@@ -11,3 +11,8 @@
 
 .eslintcache
 .eslintcache
+.idea
+!.idea/
+.idea/*
+!.idea/runConfigurations/
+
