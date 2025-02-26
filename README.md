@@ -32,7 +32,7 @@ form8ion utility for managing ignore files
 ### Installation
 
 ```sh
-$ npm install @form8ion/ignore-file
+$ npm install @form8ion/ignore-file --save-prod
 ```
 
 ### Example
