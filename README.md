@@ -38,8 +38,18 @@ $ npm install @form8ion/ignore-file --save-prod
 
 ### Example
 
+#### Import
+
 ```javascript
-import {} from '@form8ion/ignore-file';
+import {read} from '@form8ion/ignore-file';
+```
+
+#### Execute
+
+```javascript
+const projectRoot = process.cwd();
+
+await read({projectRoot, name: 'tool-name'});
 ```
 
 ## Contributing
