@@ -43,17 +43,20 @@ $ npm install @form8ion/ignore-file --save-prod
 #### Import
 
 ```javascript
-import {read, write} from '@form8ion/ignore-file';
+import {exists, read, write} from '@form8ion/ignore-file';
 ```
 
 #### Execute
 
 ```javascript
 const projectRoot = process.cwd();
+const toolName = 'tool-name';
 
-await read({projectRoot, name: 'tool-name'});
+await exists({projectRoot, name: toolName});
 
-await write({projectRoot, name: 'tool-name', ignores: ['foo/', 'bar.js']});
+await read({projectRoot, name: toolName});
+
+await write({projectRoot, name: toolName, ignores: ['foo/', 'bar.js']});
 ```
 
 ## Contributing

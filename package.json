@@ -67,5 +67,8 @@
     "rollup-plugin-auto-external": "2.0.0",
     "vitest": "3.0.7",
     "vitest-when": "0.6.0"
+  },
+  "dependencies": {
+    "@form8ion/core": "^4.8.0"
   }
 }
