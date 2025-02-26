@@ -15,6 +15,8 @@ form8ion utility for managing ignore files
 * [Usage](#usage)
   * [Installation](#installation)
   * [Example](#example)
+    * [Import](#import)
+    * [Execute](#execute)
 * [Contributing](#contributing)
   * [Dependencies](#dependencies)
   * [Verification](#verification)
@@ -26,6 +28,7 @@ form8ion utility for managing ignore files
 [![npm][npm-badge]][npm-link]
 [![Try @form8ion/ignore-file on RunKit][runkit-badge]][runkit-link]
 [![license][license-badge]][license-link]
+![node][node-badge]
 
 <!--consumer-badges end -->
 
@@ -37,8 +40,23 @@ $ npm install @form8ion/ignore-file --save-prod
 
 ### Example
 
+#### Import
+
 ```javascript
-import {} from '@form8ion/ignore-file';
+import {exists, read, write} from '@form8ion/ignore-file';
+```
+
+#### Execute
+
+```javascript
+const projectRoot = process.cwd();
+const toolName = 'tool-name';
+
+await exists({projectRoot, name: toolName});
+
+await read({projectRoot, name: toolName});
+
+await write({projectRoot, name: toolName, ignores: ['foo/', 'bar.js']});
 ```
 
 ## Contributing
@@ -107,3 +125,5 @@ $ npm test
 [license-link]: LICENSE
 
 [license-badge]: https://img.shields.io/github/license/form8ion/ignore-file.svg?logo=opensourceinitiative
+
+[node-badge]: https://img.shields.io/node/v/@form8ion/ignore-file?logo=node.js

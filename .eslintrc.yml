@@ -1,2 +1,6 @@
 root: true
+
 extends: '@form8ion'
+
+parserOptions:
+  ecmaVersion: 2022
