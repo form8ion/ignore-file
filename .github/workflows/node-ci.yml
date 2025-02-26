@@ -32,6 +32,7 @@ jobs:
           cache: npm
           node-version: ${{ matrix.node }}
       - run: npm clean-install
+      - run: npm install --global corepack@latest
       - run: corepack npm audit signatures
       - run: npm test
   verify:
@@ -44,6 +45,7 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm clean-install
+      - run: npm install --global corepack@latest
       - run: corepack npm audit signatures
       - run: npm test
       - uses: codecov/codecov-action@v4.5.0
