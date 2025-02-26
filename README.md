@@ -15,6 +15,8 @@ form8ion utility for managing ignore files
 * [Usage](#usage)
   * [Installation](#installation)
   * [Example](#example)
+    * [Import](#import)
+    * [Execute](#execute)
 * [Contributing](#contributing)
   * [Dependencies](#dependencies)
   * [Verification](#verification)
@@ -41,7 +43,7 @@ $ npm install @form8ion/ignore-file --save-prod
 #### Import
 
 ```javascript
-import {read} from '@form8ion/ignore-file';
+import {read, write} from '@form8ion/ignore-file';
 ```
 
 #### Execute
@@ -50,6 +52,8 @@ import {read} from '@form8ion/ignore-file';
 const projectRoot = process.cwd();
 
 await read({projectRoot, name: 'tool-name'});
+
+await write({projectRoot, name: 'tool-name', ignores: ['foo/', 'bar.js']});
 ```
 
 ## Contributing
